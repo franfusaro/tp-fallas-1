@@ -178,24 +178,3 @@ class DiagnosticadorPresuntivo(KnowledgeEngine):
 	)
 	def R10_Resfriado_Comun(self):
 		self.response = "Lo mas probable es que el paciente tenga un resfriado común."
-
-def main():
-	engine = DiagnosticadorPresuntivo()
-	engine.reset()
-	paciente_sintomas = PacienteSintomas(fiebre_mayor_37 = False, 
-		dolor_garganta = "INTENSO", 
-		dif_respirar = "AGUDA",
-		cansancio = "NADA",
-		anosmia = "NADA",
-		ageusia = "NADA",
-		tos_seca = "ASD",
-		cefalea = False,
-		secrecion_nasal = True,
-		grupo_riesgo = True,
-		contacto_estrecho = "CASUAL",
-		cant_contagios_zona = "BAJO")	
-	engine.declare(paciente_sintomas)
-	engine.run()
-	print(engine.response)
-
-main()
