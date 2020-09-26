@@ -1,29 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 <h1>{% block title %} Nueva Consulta {% endblock %}</h1>
 
-<form method="post">
+<form method="POST">
   <div class="form-group">
     <label for="fever">Tiene fiebre?</label>
-    <select
-      id="fever"
-      name="fever"
-      required
-      class="form-control"
-      value="{{ request.form['fever'] }}"
-    >
+    <select id="fever" name="fever" required class="form-control">
       <option selected value="No">No (menor a 37)</option>
       <option value="Si">Si (mayor a 37)</option>
     </select>
   </div>
   <div class="form-group">
     <label for="sore_throat">Tiene dolor de garganta?</label>
-    <select
-      id="sore_throat"
-      name="sore_throat"
-      required
-      class="form-control"
-      value="{{ request.form['sore_throat'] }}"
-    >
+    <select id="sore_throat" name="sore_throat" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="NORMAL">Normal</option>
       <option value="INTENSO">Intenso</option>
@@ -31,13 +19,7 @@
   </div>
   <div class="form-group">
     <label for="breath">Tiene dificultad para respirar?</label>
-    <select
-      id="breath"
-      name="breath"
-      required
-      class="form-control"
-      value="{{ request.form['breath'] }}"
-    >
+    <select id="breath" name="breath" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="PREXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
@@ -45,13 +27,7 @@
   </div>
   <div class="form-group">
     <label for="fatigue">Cansancio?</label>
-    <select
-      id="fatigue"
-      name="fatigue"
-      required
-      class="form-control"
-      value="{{ request.form['fatigue'] }}"
-    >
+    <select id="fatigue" name="fatigue" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="PREXISTENTE">Preexistente</option>
       <option value="AGUDA">Agudo</option>
@@ -59,13 +35,7 @@
   </div>
   <div class="form-group">
     <label for="smell">Anosmia (pérdida del sentido del olfato)?</label>
-    <select
-      id="smell"
-      name="smell"
-      required
-      class="form-control"
-      value="{{ request.form['smell'] }}"
-    >
+    <select id="smell" name="smell" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="PREXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
@@ -73,13 +43,7 @@
   </div>
   <div class="form-group">
     <label for="taste">Ageusia (pérdida del sentido del gusto)?</label>
-    <select
-      id="taste"
-      name="taste"
-      required
-      class="form-control"
-      value="{{ request.form['taste'] }}"
-    >
+    <select id="taste" name="taste" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="PREXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
@@ -87,13 +51,7 @@
   </div>
   <div class="form-group">
     <label for="cough">Tiene tos?</label>
-    <select
-      id="cough"
-      name="cough"
-      required
-      class="form-control"
-      value="{{ request.form['cough'] }}"
-    >
+    <select id="cough" name="cough" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="PREXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
@@ -101,13 +59,7 @@
   </div>
   <div class="form-group">
     <label for="headache">Tiene cefalea (dolor de cabeza)?</label>
-    <select
-      id="headache"
-      name="headache"
-      required
-      class="form-control"
-      value="{{ request.form['headache'] }}"
-    >
+    <select id="headache" name="headache" required class="form-control">
       <option selected value="NADA">Nada</option>
       <option value="PREXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
@@ -115,39 +67,21 @@
   </div>
   <div class="form-group">
     <label for="mocus">Tiene secreción nasal?</label>
-    <select
-      id="mocus"
-      name="mocus"
-      required
-      class="form-control"
-      value="{{ request.form['mocus'] }}"
-    >
+    <select id="mocus" name="mocus" required class="form-control">
       <option selected value="No">No</option>
       <option value="Si">Si</option>
     </select>
   </div>
   <div class="form-group">
     <label for="risk">Pertenece a grupo de riesgo?</label>
-    <select
-      id="risk"
-      name="risk"
-      required
-      class="form-control"
-      value="{{ request.form['risk'] }}"
-    >
+    <select id="risk" name="risk" required class="form-control">
       <option selected value="No">No</option>
       <option value="Si">Si</option>
     </select>
   </div>
   <div class="form-group">
     <label for="contact">Tuvo contacto con alguna persona infectada?</label>
-    <select
-      id="contact"
-      name="contact"
-      required
-      class="form-control"
-      value="{{ request.form['contact'] }}"
-    >
+    <select id="contact" name="contact" required class="form-control">
       <option selected value="No">No</option>
       <option selected value="Casual">Contacto casual</option>
       <option value="Permanente">Contacto permanente (convivencia)</option>
@@ -155,13 +89,7 @@
   </div>
   <div class="form-group">
     <label for="zone">Cantidad de contagios en su zona</label>
-    <select
-      id="zone"
-      name="zone"
-      required
-      class="form-control"
-      value="{{ request.form['zone'] }}"
-    >
+    <select id="zone" name="zone" required class="form-control">
       <option selected value="Alto">Zona de alto riesgo</option>
       <option selected value="Bajo">Zona de bajo iesgo</option>
       <option value="NADA">Zona sin casos</option>
