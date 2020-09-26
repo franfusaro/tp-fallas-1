@@ -1,6 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 <h1>{% block title %} Diagnóstico Presuntivo {% endblock %}</h1>
-<button type="button" class="btn btn-primary">
-  Comenzar diagnóstico presuntivo
-</button>
+<p>
+  Esta herramienta creada por estudiantes de la Facultad de Ingeniería de la
+  Universidad de Buenos Aires ha sido desarrollada para colaborar con los
+  especialistas en el diagnóstico presuntivo de enfermedades respiratorias.
+</p>
+<p>
+  Haga click en "Comenzar Diagnóstico" para completar el formulario y obtener un
+  diagnóstico presuntivo.
+</p>
+<a href="/consulta" class="btn btn-info" role="button">Comenzar Diagnóstico</a>
 {% endblock %}
