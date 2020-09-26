@@ -21,7 +21,7 @@
     <label for="breath">Tiene dificultad para respirar?</label>
     <select id="breath" name="breath" required class="form-control">
       <option selected value="NADA">Nada</option>
-      <option value="PREXISTENTE">Preexistente</option>
+      <option value="PREEXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
     </select>
   </div>
@@ -29,15 +29,15 @@
     <label for="fatigue">Cansancio?</label>
     <select id="fatigue" name="fatigue" required class="form-control">
       <option selected value="NADA">Nada</option>
-      <option value="PREXISTENTE">Preexistente</option>
-      <option value="AGUDA">Agudo</option>
+      <option value="NORMAL">Normal</option>
+      <option value="INTENSO">Intenso</option>
     </select>
   </div>
   <div class="form-group">
     <label for="smell">Anosmia (pérdida del sentido del olfato)?</label>
     <select id="smell" name="smell" required class="form-control">
       <option selected value="NADA">Nada</option>
-      <option value="PREXISTENTE">Preexistente</option>
+      <option value="PREEXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
     </select>
   </div>
@@ -45,24 +45,23 @@
     <label for="taste">Ageusia (pérdida del sentido del gusto)?</label>
     <select id="taste" name="taste" required class="form-control">
       <option selected value="NADA">Nada</option>
-      <option value="PREXISTENTE">Preexistente</option>
+      <option value="PREEXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
     </select>
   </div>
   <div class="form-group">
-    <label for="cough">Tiene tos?</label>
+    <label for="cough">Tiene tos seca?</label>
     <select id="cough" name="cough" required class="form-control">
       <option selected value="NADA">Nada</option>
-      <option value="PREXISTENTE">Preexistente</option>
+      <option value="PREEXISTENTE">Preexistente</option>
       <option value="AGUDA">Aguda</option>
     </select>
   </div>
   <div class="form-group">
     <label for="headache">Tiene cefalea (dolor de cabeza)?</label>
     <select id="headache" name="headache" required class="form-control">
-      <option selected value="NADA">Nada</option>
-      <option value="PREXISTENTE">Preexistente</option>
-      <option value="AGUDA">Aguda</option>
+        <option selected value="No">No</option>
+        <option value="Si">Si</option>
     </select>
   </div>
   <div class="form-group">
@@ -82,16 +81,16 @@
   <div class="form-group">
     <label for="contact">Tuvo contacto con alguna persona infectada?</label>
     <select id="contact" name="contact" required class="form-control">
-      <option selected value="No">No</option>
-      <option selected value="Casual">Contacto casual</option>
-      <option value="Permanente">Contacto permanente (convivencia)</option>
+      <option selected value="NO">No</option>
+      <option selected value="CASUAL">Contacto casual</option>
+      <option value="PERMANENTE">Contacto permanente (convivencia)</option>
     </select>
   </div>
   <div class="form-group">
     <label for="zone">Cantidad de contagios en su zona</label>
     <select id="zone" name="zone" required class="form-control">
-      <option selected value="Alto">Zona de alto riesgo</option>
-      <option selected value="Bajo">Zona de bajo iesgo</option>
+      <option selected value="ALTO">Zona de alto riesgo</option>
+      <option selected value="BAJO">Zona de bajo riesgo</option>
       <option value="NADA">Zona sin casos</option>
     </select>
   </div>

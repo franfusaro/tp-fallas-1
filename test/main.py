@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
+from diagnosticador_presuntivo import *
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
@@ -24,7 +25,23 @@ def create():
         contact = request.form['contact']
         zone =request.form['zone']
 
-        #resultado = procesar_sintomas(fever, throat, breath, fatigue, smell, taste, cough, headache, mocus, risk, contact, zone)
-        resultado = "Algún resultado"
+        engine = DiagnosticadorPresuntivo()
+        engine.reset()
+        paciente_sintomas = PacienteSintomas(fiebre_mayor_37 = (fever == "Si"), 
+            dolor_garganta = throat, 
+            dif_respirar = breath,
+            cansancio = fatigue,
+            anosmia = smell,
+            ageusia = taste,
+            tos_seca = cough,
+            cefalea = (headache == "Si"),
+            secrecion_nasal = (mocus == "Si"),
+            grupo_riesgo = (risk == "Si"),
+            contacto_estrecho = contact,
+            cant_contagios_zona = zone)
+        engine.declare(paciente_sintomas)
+        engine.run()
+
+        resultado = engine.response
         return render_template('resultados.html', resultado = resultado)
     return render_template('consulta.html')
